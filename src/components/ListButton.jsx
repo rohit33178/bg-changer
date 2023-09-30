@@ -1,5 +1,4 @@
 import React, { useId } from 'react'
-import ColorsArray from '../colors';
 
 export default function ListButton({ parentHandler }) {
 
@@ -9,6 +8,7 @@ export default function ListButton({ parentHandler }) {
             <ul className='listContainer flex flex-wrap-reverse shadow-lg'>
                 {colors?.map((color) => (
                     <li
+                        data-key={useId()}
                         key={useId()}
                         onClick={() => parentHandler(color)}
                         className='button'
